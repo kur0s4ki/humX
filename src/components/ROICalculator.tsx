@@ -103,7 +103,7 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({
   value,
   formatFn = (val) => val.toString(),
   className = "",
-  duration = 400
+  duration = 300
 }) => {
   const [displayValue, setDisplayValue] = useState(value);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -112,7 +112,7 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({
   const startValueRef = useRef<number>(value);
 
   useEffect(() => {
-    if (value === displayValue) return;
+    if (Math.abs(value - displayValue) < 0.01) return;
 
     setIsAnimating(true);
     startValueRef.current = displayValue;
@@ -144,7 +144,7 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [value, duration, displayValue]);
+  }, [value, duration]);
 
   return (
     <span className={`${className} ${isAnimating ? 'transition-all duration-200' : ''}`}>
