@@ -1,73 +1,75 @@
-# Welcome to your Lovable project
+# AI ROI Calculator
 
-## Project info
+A comprehensive ROI calculator designed for law firms to compare the costs and benefits of implementing AI systems versus hiring additional staff.
 
-**URL**: https://lovable.dev/projects/22bd0ddc-128d-4e72-88d5-d0f13a8926dd
+## Features
 
-## How can I edit this code?
+- **Cost Comparison**: Compare total cost of ownership between AI implementation and hiring employees
+- **Dynamic Pricing**: Tiered pricing models based on firm size (Small, Medium, Large, Enterprise)
+- **Comprehensive Calculations**: Includes implementation costs, training costs, and ongoing expenses
+- **Real-time Animations**: Smooth number animations for immediate visual feedback
+- **Professional UI**: Clean, responsive design suitable for executive decision-making
+- **Detailed Metrics**: ROI, payback period, profit increases, and savings analysis
 
-There are several ways of editing your application.
+## Getting Started
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/22bd0ddc-128d-4e72-88d5-d0f13a8926dd) and start prompting.
+- Node.js (v16 or higher)
+- npm or yarn
 
-Changes made via Lovable will be committed automatically to this repo.
+### Installation
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+1. Clone the repository:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
+cd ai-roi-calculator
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
 
-# Step 3: Install the necessary dependencies.
-npm i
+```sh
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and navigate to `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Technologies Used
 
-**Use GitHub Codespaces**
+This project is built with modern web technologies:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Vite** - Fast build tool and development server
+- **TypeScript** - Type-safe JavaScript
+- **React** - UI library with hooks
+- **shadcn/ui** - Modern component library
+- **Tailwind CSS** - Utility-first CSS framework
+- **Lucide React** - Beautiful icons
 
-## What technologies are used for this project?
+## Project Structure
 
-This project is built with:
+```
+src/
+├── components/
+│   ├── ui/           # Reusable UI components
+│   └── ROICalculator.tsx  # Main calculator component
+├── hooks/            # Custom React hooks
+├── lib/              # Utility functions
+└── pages/            # Application pages
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Deployment
 
-## How can I deploy this project?
+Build the project for production:
 
-Simply open [Lovable](https://lovable.dev/projects/22bd0ddc-128d-4e72-88d5-d0f13a8926dd) and click on Share -> Publish.
+```sh
+npm run build
+```
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+The built files will be in the `dist` directory, ready for deployment to any static hosting service.
