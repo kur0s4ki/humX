@@ -61,7 +61,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'purple-primary': 'hsl(var(--purple-primary))',
+				'purple-secondary': 'hsl(var(--purple-secondary))',
+				'green-primary': 'hsl(var(--green-primary))',
+				'green-secondary': 'hsl(var(--green-secondary))',
+				'red-metric': 'hsl(var(--red-metric))',
+				'green-metric': 'hsl(var(--green-metric))',
+				'blue-roi': 'hsl(var(--blue-roi))',
+				'orange-payback': 'hsl(var(--orange-payback))'
+			},
+			backgroundImage: {
+				'gradient-purple': 'var(--gradient-purple)',
+				'gradient-green': 'var(--gradient-green)'
+			},
+			boxShadow: {
+				'card': 'var(--shadow-card)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
