@@ -4,7 +4,7 @@
   "description": "Comprehensive ROI calculator for law firms to compare AI implementation vs hiring costs",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/public/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }
