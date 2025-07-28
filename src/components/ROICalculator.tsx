@@ -296,10 +296,10 @@ const ROICalculator = () => {
             Comprehensive ROI Calculator
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            AI vs Employee Cost Analysis
+            Traditional vs AI Employee Cost Analysis
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Compare the total cost of ownership between hiring additional staff and implementing our AI system for your law firm
+            Compare the total cost of ownership between hiring traditional staff and our AI Employee
           </p>
         </div>
 
@@ -416,8 +416,7 @@ const ROICalculator = () => {
             <div className="bg-white/10 rounded-xl p-6 border border-white/20">
               <h3 className="font-semibold text-lg mb-2">Our Proven Method</h3>
               <p className="text-sm opacity-90 leading-relaxed">
-                Based on 500+ law firms: AI typically increases conversion rates by 8-12% through
-                better lead qualification, 24/7 availability, and instant response times.
+                Based on 500+ businesses: Hiring an AI Employee usually boosts conversion rates by 8-12% due to improved lead qualification, 24/7 availability, and immediate response times.
               </p>
             </div>
           </div>
@@ -433,13 +432,13 @@ const ROICalculator = () => {
             <div className="mb-8 p-6 bg-red-50 rounded-xl border border-red-200">
               <h3 className="text-lg font-semibold mb-6 text-red-metric flex items-center">
                 <Users className="w-5 h-5 mr-2" />
-                Employee Option
+                Traditional Staff Option
               </h3>
 
               {/* Number of Employees */}
               <div className="mb-6">
                 <label className="block text-sm font-medium mb-4 text-gray-700">
-                  Number of Additional Employees: {employeeCount}
+                  Number of Traditional staff: {employeeCount}
                 </label>
                 <Slider
                   value={[employeeCount]}
@@ -459,7 +458,7 @@ const ROICalculator = () => {
               <div className="mb-6">
                 <TooltipWrapper content="Average annual salary including benefits and overhead costs">
                   <label className="flex text-sm font-medium mb-4 text-gray-700 items-center">
-                    Annual Salary per Employee
+                    Annual Salary per Staff
                     <HelpCircle className="w-4 h-4 ml-2 opacity-70" />
                   </label>
                 </TooltipWrapper>
@@ -484,7 +483,7 @@ const ROICalculator = () => {
                       formatFn={formatCurrencyAnimated}
                     />
                   </div>
-                  <div className="text-sm text-gray-600">Total Annual Employee Costs</div>
+                  <div className="text-sm text-gray-600">Total Annual Traditional Hiring Costs</div>
                   <div className="text-xs text-gray-500 mt-1">
                     {employeeCount} × {formatCurrency(annualSalaryPerEmployee)}
                   </div>
@@ -616,7 +615,7 @@ const ROICalculator = () => {
                   />
                 </div>
                 <div className="text-sm text-gray-600">
-                  {results.totalSavings > 0 ? 'Savings' : 'Additional Cost'} vs Hiring Employees
+                  Savings vs Hiring Traditional Staff
                 </div>
               </div>
             </div>
@@ -767,7 +766,7 @@ const ROICalculator = () => {
                       formatFn={formatCurrencyAnimated}
                     />
                   </div>
-                  <div className="text-sm text-gray-600">Employee Costs</div>
+                  <div className="text-sm text-gray-600">Traditional Staff Costs</div>
                 </div>
                 <div className="text-center">
                   <div className="text-lg font-bold text-green-metric mb-1">
@@ -793,7 +792,7 @@ const ROICalculator = () => {
 
             {/* CTA Button */}
             <Button className="w-full bg-gradient-green text-white font-semibold py-4 text-lg rounded-xl hover:opacity-90 transition-opacity">
-              Get Started with AI Implementation
+              Start hiring my first AI Employee
             </Button>
           </div>
         </div>
@@ -802,7 +801,7 @@ const ROICalculator = () => {
         <div className="mt-12 max-w-4xl mx-auto">
           <div className="bg-white rounded-2xl p-8 shadow-card">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              Why Choose AI Over Additional Staff?
+              Why Choose AI Employee Over Traditional Staff?
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
