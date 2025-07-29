@@ -240,8 +240,8 @@ const ROICalculator = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gray-50 py-8 px-3 sm:px-4 w-full overflow-x-hidden">
+      <div className="max-w-7xl mx-auto w-full min-w-0">
         {/* Header */}
         <div className="text-center mb-12">
           <Badge className="mb-6 bg-purple-primary text-white px-6 py-2 text-sm font-medium">
@@ -257,9 +257,9 @@ const ROICalculator = () => {
         </div>
 
         {/* Main Calculator Grid - Three Columns */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="w-full min-w-0 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           {/* Left Panel - Business Inputs */}
-          <div className="bg-gradient-purple rounded-2xl p-8 text-white shadow-card">
+          <div className="w-full min-w-0 bg-gradient-purple rounded-2xl p-6 lg:p-8 text-white shadow-card overflow-hidden">
             <h2 className="text-2xl font-bold mb-8 flex items-center">
               <Briefcase className="w-6 h-6 mr-2" />
               Business Parameters
@@ -292,13 +292,13 @@ const ROICalculator = () => {
                   <HelpCircle className="w-4 h-4 ml-2 opacity-70" />
                 </label>
               </TooltipWrapper>
-              <div className="relative">
+              <div className="relative w-full">
                 <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-lg">£</span>
                 <Input
                   type="number"
                   value={averageSaleValue}
                   onChange={(e) => setAverageSaleValue(Number(e.target.value) || 0)}
-                  className="pl-8 bg-white/10 border-white/20 text-white placeholder-white/60 text-lg h-12 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [-moz-appearance:textfield]"
+                  className="w-full pl-8 bg-white/10 border-white/20 text-white placeholder-white/60 text-lg h-12 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [-moz-appearance:textfield]"
                   placeholder="2500"
                 />
               </div>
@@ -353,13 +353,13 @@ const ROICalculator = () => {
                   <HelpCircle className="w-4 h-4 ml-2 opacity-70" />
                 </label>
               </TooltipWrapper>
-              <div className="relative">
+              <div className="relative w-full">
                 <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-lg">£</span>
                 <Input
                   type="number"
                   value={monthlyMarketingSpend}
                   onChange={(e) => setMonthlyMarketingSpend(Number(e.target.value) || 0)}
-                  className="pl-8 bg-white/10 border-white/20 text-white placeholder-white/60 text-lg h-12 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [-moz-appearance:textfield]"
+                  className="w-full pl-8 bg-white/10 border-white/20 text-white placeholder-white/60 text-lg h-12 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [-moz-appearance:textfield]"
                   placeholder="0"
                 />
               </div>
@@ -375,7 +375,7 @@ const ROICalculator = () => {
           </div>
 
           {/* Middle Panel - Cost Comparison */}
-          <div className="bg-white rounded-2xl p-8 shadow-card border border-gray-200">
+          <div className="w-full min-w-0 bg-white rounded-2xl p-6 lg:p-8 shadow-card border border-gray-200 overflow-hidden">
             <h2 className="text-2xl font-bold mb-8 text-gray-900 flex items-center">
               <Users className="w-6 h-6 mr-2 text-blue-roi" />
               Cost Comparison
@@ -542,14 +542,14 @@ const ROICalculator = () => {
                   />
                 </div>
                 <div className="text-sm text-gray-600">
-                  Savings vs Hiring Traditional Staff
+                  Savings with AI Employee vs Hiring Traditional Staff
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right Panel - Enhanced Results */}
-          <div className="bg-white rounded-2xl p-8 shadow-card">
+          <div className="w-full min-w-0 bg-white rounded-2xl p-6 lg:p-8 shadow-card overflow-hidden">
             <h2 className="text-2xl font-bold mb-8 text-gray-900 flex items-center">
               <TrendingUp className="w-6 h-6 mr-2 text-green-secondary" />
               Comprehensive Results
@@ -614,106 +614,106 @@ const ROICalculator = () => {
             </div>
 
             {/* Key Metrics Grid */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-center">
-                <div className="text-xl font-bold text-red-metric mb-1">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <div className="bg-red-50 border border-red-200 rounded-xl p-3 sm:p-4 text-center">
+                <div className="text-lg sm:text-xl font-bold text-red-metric mb-1">
                   <AnimatedNumber
                     value={results.currentAnnualProfit}
                     formatFn={formatCurrencyAnimated}
                   />
                 </div>
-                <div className="text-sm text-gray-600">Current Annual Profit</div>
+                <div className="text-xs sm:text-sm text-gray-600">Current Annual Profit</div>
               </div>
 
-              <div className="bg-green-50 border border-green-200 rounded-xl p-4 text-center">
-                <div className="text-xl font-bold text-green-metric mb-1">
+              <div className="bg-green-50 border border-green-200 rounded-xl p-3 sm:p-4 text-center">
+                <div className="text-lg sm:text-xl font-bold text-green-metric mb-1">
                   <AnimatedNumber
                     value={results.aiAnnualProfit}
                     formatFn={formatCurrencyAnimated}
                   />
                 </div>
-                <div className="text-sm text-gray-600">AI Annual Profit</div>
+                <div className="text-xs sm:text-sm text-gray-600">AI Annual Profit</div>
               </div>
 
-              <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 text-center">
-                <div className="text-xl font-bold text-blue-roi mb-1">
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-3 sm:p-4 text-center">
+                <div className="text-lg sm:text-xl font-bold text-blue-roi mb-1">
                   <AnimatedNumber
                     value={results.monthlyProfitIncrease}
                     formatFn={formatCurrencyAnimated}
                   />
                 </div>
-                <div className="text-sm text-gray-600">Monthly Profit Increase</div>
+                <div className="text-xs sm:text-sm text-gray-600">Monthly Profit Increase</div>
               </div>
 
-              <div className="bg-purple-50 border border-purple-200 rounded-xl p-4 text-center">
-                <div className="text-xl font-bold text-purple-primary mb-1">
+              <div className="bg-purple-50 border border-purple-200 rounded-xl p-3 sm:p-4 text-center">
+                <div className="text-lg sm:text-xl font-bold text-purple-primary mb-1">
                   <AnimatedNumber
                     value={results.annualProfitIncrease}
                     formatFn={formatCurrencyAnimated}
                   />
                 </div>
-                <div className="text-sm text-gray-600">Annual Profit Increase</div>
+                <div className="text-xs sm:text-sm text-gray-600">Annual Profit Increase</div>
               </div>
             </div>
 
             {/* ROI and Payback */}
-            <div className="grid grid-cols-2 gap-6 mb-8">
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl">
-                <div className="text-3xl font-bold text-blue-roi mb-2">
+            <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-6 sm:mb-8">
+              <div className="text-center p-3 sm:p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl">
+                <div className="text-2xl sm:text-3xl font-bold text-blue-roi mb-2">
                   <AnimatedNumber
                     value={results.roi}
                     formatFn={formatPercentageAnimated}
                   />
                 </div>
-                <div className="text-sm text-gray-600 font-medium">Return on Investment</div>
+                <div className="text-xs sm:text-sm text-gray-600 font-medium">Return on Investment</div>
                 <div className="text-xs text-gray-500 mt-1">Including all costs</div>
               </div>
 
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl">
-                <div className="text-3xl font-bold text-orange-payback mb-2 flex items-center justify-center">
-                  <span className="w-6 h-6 rounded-full bg-orange-payback text-white text-sm flex items-center justify-center mr-2">!</span>
+              <div className="text-center p-3 sm:p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl">
+                <div className="text-2xl sm:text-3xl font-bold text-orange-payback mb-2 flex items-center justify-center">
+                  <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-orange-payback text-white text-xs sm:text-sm flex items-center justify-center mr-1 sm:mr-2">!</span>
                   <AnimatedNumber
                     value={results.paybackMonths}
                     formatFn={(val) => val.toFixed(1)}
                   />
                 </div>
-                <div className="text-sm text-gray-600 font-medium">Months to Payback</div>
+                <div className="text-xs sm:text-sm text-gray-600 font-medium">Months to Payback</div>
                 <div className="text-xs text-gray-500 mt-1">Break-even point</div>
               </div>
             </div>
 
             {/* Total Cost of Ownership Summary */}
-            <div className="mb-8 p-6 bg-gray-50 rounded-xl border border-gray-200">
-              <h4 className="font-semibold text-gray-900 mb-4 text-center">Total Cost of Ownership (Annual)</h4>
-              <div className="grid grid-cols-2 gap-4">
+            <div className="mb-6 sm:mb-8 p-4 sm:p-6 bg-gray-50 rounded-xl border border-gray-200">
+              <h4 className="font-semibold text-gray-900 mb-4 text-center text-sm sm:text-base">Total Cost of Ownership (Annual)</h4>
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <div className="text-center">
-                  <div className="text-lg font-bold text-red-metric mb-1">
+                  <div className="text-base sm:text-lg font-bold text-red-metric mb-1">
                     <AnimatedNumber
                       value={results.totalEmployeeCosts}
                       formatFn={formatCurrencyAnimated}
                     />
                   </div>
-                  <div className="text-sm text-gray-600">Traditional Staff Costs</div>
+                  <div className="text-xs sm:text-sm text-gray-600">Traditional Staff Costs</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-lg font-bold text-green-metric mb-1">
+                  <div className="text-base sm:text-lg font-bold text-green-metric mb-1">
                     <AnimatedNumber
                       value={results.totalAiCosts}
                       formatFn={formatCurrencyAnimated}
                     />
                   </div>
-                  <div className="text-sm text-gray-600">AI Employee Costs</div>
+                  <div className="text-xs sm:text-sm text-gray-600">AI Employee Costs</div>
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-gray-300 text-center">
-                <div className={`text-xl font-bold ${results.totalSavings > 0 ? 'text-green-metric' : 'text-red-metric'}`}>
+                <div className={`text-lg sm:text-xl font-bold ${results.totalSavings > 0 ? 'text-green-metric' : 'text-red-metric'}`}>
                   {results.totalSavings > 0 ? 'Save ' : 'Additional Cost: '}
                   <AnimatedNumber
                     value={Math.abs(results.totalSavings)}
                     formatFn={formatCurrencyAnimated}
                   />
                 </div>
-                <div className="text-sm text-gray-600">with AI vs Hiring</div>
+                <div className="text-xs sm:text-sm text-gray-600">with AI vs Hiring</div>
               </div>
             </div>
 
@@ -725,8 +725,8 @@ const ROICalculator = () => {
         </div>
 
         {/* Additional Information Section */}
-        <div className="mt-12 max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl p-8 shadow-card">
+        <div className="mt-8 sm:mt-12 max-w-4xl mx-auto px-2">
+          <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-card">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
               Why Choose AI Employee Over Traditional Staff?
             </h3>
