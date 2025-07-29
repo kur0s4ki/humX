@@ -495,7 +495,7 @@ const ROICalculator = () => {
             <div className="mb-8 p-6 bg-green-50 rounded-xl border border-green-200">
               <h3 className="text-lg font-semibold mb-6 text-green-metric flex items-center">
                 <DollarSign className="w-5 h-5 mr-2" />
-                AI System Option
+                AI Employee Option
               </h3>
 
               {/* Pricing Tier Selection */}
@@ -653,7 +653,7 @@ const ROICalculator = () => {
 
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-gray-600">With AI System</span>
+                    <span className="text-gray-600">With AI Employee</span>
                     <div className="text-right">
                       <div className="font-semibold">
                         <AnimatedNumber
@@ -775,7 +775,7 @@ const ROICalculator = () => {
                       formatFn={formatCurrencyAnimated}
                     />
                   </div>
-                  <div className="text-sm text-gray-600">AI System Costs</div>
+                  <div className="text-sm text-gray-600">AI Employee Costs</div>
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-gray-300 text-center">
