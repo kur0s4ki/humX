@@ -3,19 +3,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Calculator, TrendingUp, Users, DollarSign, HelpCircle, Briefcase } from "lucide-react";
 
 // TypeScript interfaces and types
-interface PricingTier {
-  id: string;
-  name: string;
-  monthlyPrice: number;
-  description: string;
-  maxEmployees?: number;
-}
-
 interface CalculationInputs {
   monthlyLeads: number;
   averageSaleValue: number;
@@ -26,7 +18,6 @@ interface CalculationInputs {
   trainingCost: number;
   employeeCount: number;
   annualSalaryPerEmployee: number;
-  selectedPricingTier: string;
   customAiPrice: number;
 }
 
@@ -55,41 +46,7 @@ interface CalculationResults {
   aiConversionRate: number;
 }
 
-const PRICING_TIERS: PricingTier[] = [
-  {
-    id: "small",
-    name: "Small Firm",
-    monthlyPrice: 750,
-    description: "Up to 5 employees",
-    maxEmployees: 5
-  },
-  {
-    id: "medium",
-    name: "Medium Firm",
-    monthlyPrice: 1500,
-    description: "6-20 employees",
-    maxEmployees: 20
-  },
-  {
-    id: "large",
-    name: "Large Firm",
-    monthlyPrice: 2500,
-    description: "21-50 employees",
-    maxEmployees: 50
-  },
-  {
-    id: "enterprise",
-    name: "Enterprise",
-    monthlyPrice: 4000,
-    description: "50+ employees",
-  },
-  {
-    id: "custom",
-    name: "Custom Pricing",
-    monthlyPrice: 0,
-    description: "Contact for pricing",
-  }
-];
+
 
 // Animated Number Component
 interface AnimatedNumberProps {
@@ -164,16 +121,12 @@ const ROICalculator = () => {
   const [trainingCost, setTrainingCost] = useState(2000);
   const [employeeCount, setEmployeeCount] = useState(1);
   const [annualSalaryPerEmployee, setAnnualSalaryPerEmployee] = useState(45000);
-  const [selectedPricingTier, setSelectedPricingTier] = useState("small");
+
   const [customAiPrice, setCustomAiPrice] = useState(1000);
 
   // Helper function to get current AI pricing
   const getCurrentAiPrice = (): number => {
-    if (selectedPricingTier === "custom") {
-      return customAiPrice;
-    }
-    const tier = PRICING_TIERS.find(t => t.id === selectedPricingTier);
-    return tier?.monthlyPrice || 750;
+    return customAiPrice;
   };
 
   // Enhanced calculation engine
@@ -498,51 +451,25 @@ const ROICalculator = () => {
                 AI Employee Option
               </h3>
 
-              {/* Pricing Tier Selection */}
+              {/* Custom Pricing Input */}
               <div className="mb-6">
                 <label className="block text-sm font-medium mb-4 text-gray-700">
-                  Select Pricing Tier
+                  Monthly AI Employee Price
                 </label>
-                <Select value={selectedPricingTier} onValueChange={setSelectedPricingTier}>
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Select pricing tier" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {PRICING_TIERS.map((tier) => (
-                      <SelectItem key={tier.id} value={tier.id}>
-                        <div className="flex justify-between items-center w-full">
-                          <span>{tier.name}</span>
-                          <span className="ml-4 text-sm text-gray-500">
-                            {tier.id === "custom" ? "Custom" : formatCurrency(tier.monthlyPrice) + "/mo"}
-                          </span>
-                        </div>
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                <div className="relative">
+                  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-sm">£</span>
+                  <Input
+                    type="number"
+                    value={customAiPrice}
+                    onChange={(e) => setCustomAiPrice(Number(e.target.value) || 0)}
+                    className="pl-8 text-sm h-10 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [-moz-appearance:textfield]"
+                    placeholder="1000"
+                  />
+                </div>
                 <p className="text-xs text-gray-500 mt-2">
-                  {PRICING_TIERS.find(t => t.id === selectedPricingTier)?.description}
+                  Contact us for pricing discussion
                 </p>
               </div>
-
-              {/* Custom Pricing Input */}
-              {selectedPricingTier === "custom" && (
-                <div className="mb-6">
-                  <label className="block text-sm font-medium mb-4 text-gray-700">
-                    Custom Monthly Price
-                  </label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-sm">£</span>
-                    <Input
-                      type="number"
-                      value={customAiPrice}
-                      onChange={(e) => setCustomAiPrice(Number(e.target.value) || 0)}
-                      className="pl-8 text-sm h-10 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [-moz-appearance:textfield]"
-                      placeholder="1000"
-                    />
-                  </div>
-                </div>
-              )}
 
               {/* Implementation Costs */}
               <div className="grid grid-cols-2 gap-4 mb-6">
