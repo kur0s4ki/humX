@@ -249,10 +249,10 @@ const ROICalculator = () => {
             Comprehensive ROI Calculator
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Traditional vs AI Employee Cost Analysis
+            Traditional vs HumX Employee Cost Analysis
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Compare the total cost of ownership between hiring traditional staff and our AI Employee
+            Compare the total cost of ownership between hiring traditional staff and our HumX Employee
           </p>
         </div>
 
@@ -369,7 +369,7 @@ const ROICalculator = () => {
             <div className="bg-white/10 rounded-xl p-6 border border-white/20">
               <h3 className="font-semibold text-lg mb-2">Our Proven Method</h3>
               <p className="text-sm opacity-90 leading-relaxed">
-                Based on 500+ businesses: Hiring an AI Employee usually boosts conversion rates by 8-12% due to improved lead qualification, 24/7 availability, and immediate response times.
+                Based on 500+ businesses: Hiring a HumX Employee usually boosts conversion rates by 8-12% due to improved lead qualification, 24/7 availability, and immediate response times.
               </p>
             </div>
           </div>
@@ -448,13 +448,13 @@ const ROICalculator = () => {
             <div className="mb-8 p-6 bg-green-50 rounded-xl border border-green-200">
               <h3 className="text-lg font-semibold mb-6 text-green-metric flex items-center">
                 <DollarSign className="w-5 h-5 mr-2" />
-                AI Employee Option
+                HumX Employee Option
               </h3>
 
               {/* Custom Pricing Input */}
               <div className="mb-6">
                 <label className="block text-sm font-medium mb-4 text-gray-700">
-                  Monthly AI Employee Price
+                  Monthly HumX Employee Price
                 </label>
                 <div className="relative">
                   <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-sm">£</span>
@@ -542,7 +542,7 @@ const ROICalculator = () => {
                   />
                 </div>
                 <div className="text-sm text-gray-600">
-                  Savings with AI Employee vs Hiring Traditional Staff
+                  Savings with HumX Employee vs Hiring Traditional Staff
                 </div>
               </div>
             </div>
@@ -580,7 +580,7 @@ const ROICalculator = () => {
 
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-gray-600">With AI Employee</span>
+                    <span className="text-gray-600">With HumX Employee</span>
                     <div className="text-right">
                       <div className="font-semibold">
                         <AnimatedNumber
@@ -702,7 +702,7 @@ const ROICalculator = () => {
                       formatFn={formatCurrencyAnimated}
                     />
                   </div>
-                  <div className="text-xs sm:text-sm text-gray-600">AI Employee Costs</div>
+                  <div className="text-xs sm:text-sm text-gray-600">HumX Employee Costs</div>
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-gray-300 text-center">
@@ -719,7 +719,7 @@ const ROICalculator = () => {
 
             {/* CTA Button */}
             <Button className="w-full bg-gradient-green text-white font-semibold py-4 text-lg rounded-xl hover:opacity-90 transition-opacity">
-              Start hiring my first AI Employee
+              Start hiring my first HumX Employee
             </Button>
           </div>
         </div>
