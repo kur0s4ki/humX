@@ -520,7 +520,7 @@ const ROICalculator = () => {
                       formatFn={formatCurrencyAnimated}
                     />
                   </div>
-                  <div className="text-sm text-gray-600">Total Annual AI Costs</div>
+                  <div className="text-sm text-gray-600">Total Annual HumX Costs</div>
                   <div className="text-xs text-gray-500 mt-1">
                     {formatCurrency(results.aiSystemCost * 12)} + {formatCurrency(results.totalImplementationCosts)} setup
                   </div>
@@ -632,7 +632,7 @@ const ROICalculator = () => {
                     formatFn={formatCurrencyAnimated}
                   />
                 </div>
-                <div className="text-xs sm:text-sm text-gray-600">AI Annual Profit</div>
+                <div className="text-xs sm:text-sm text-gray-600">HumX Annual Profit</div>
               </div>
 
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-3 sm:p-4 text-center">
@@ -713,7 +713,7 @@ const ROICalculator = () => {
                     formatFn={formatCurrencyAnimated}
                   />
                 </div>
-                <div className="text-xs sm:text-sm text-gray-600">with AI vs Hiring</div>
+                <div className="text-xs sm:text-sm text-gray-600">with HumX vs Hiring</div>
               </div>
             </div>
 
@@ -728,7 +728,7 @@ const ROICalculator = () => {
         <div className="mt-8 sm:mt-12 max-w-4xl mx-auto px-2">
           <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-card">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              Why Choose AI Employee Over Traditional Staff?
+              Why Choose HumX Employee Over Traditional Staff?
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
@@ -737,7 +737,7 @@ const ROICalculator = () => {
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">24/7 Availability</h4>
                 <p className="text-sm text-gray-600">
-                  AI works around the clock, capturing leads and qualifying prospects even when your office is closed.
+                  HumX works around the clock, capturing leads and qualifying prospects even when your office is closed.
                 </p>
               </div>
               <div className="text-center">
@@ -746,7 +746,7 @@ const ROICalculator = () => {
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">Consistent Performance</h4>
                 <p className="text-sm text-gray-600">
-                  No sick days, vacation time, or performance variations. AI delivers consistent results every day.
+                  No sick days, vacation time, or performance variations. HumX delivers consistent results every day.
                 </p>
               </div>
               <div className="text-center">
