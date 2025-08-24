@@ -273,13 +273,13 @@ const ROICalculator = () => {
               <Slider
                 value={[monthlyLeads]}
                 onValueChange={(value) => setMonthlyLeads(value[0])}
-                min={50}
+                min={0}
                 max={500}
                 step={10}
                 className="mb-2"
               />
               <div className="flex justify-between text-sm opacity-80">
-                <span>50</span>
+                <span>0</span>
                 <span>500</span>
               </div>
             </div>
